@@ -5,7 +5,8 @@ using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-// TODO doc this shit..2323
+// TODO doc this shit
+//dasds
 namespace API.Controllers {
     [ApiController]
     [Route ("/api/[controller]")]
