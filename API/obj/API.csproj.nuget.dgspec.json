@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\fullstack\\DatingApp\\api\\API.csproj": {}
+    "C:\\code\\fullstack\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\code\\fullstack\\DatingApp\\api\\API.csproj": {
+    "C:\\code\\fullstack\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\fullstack\\DatingApp\\api\\API.csproj",
+        "projectUniqueName": "C:\\code\\fullstack\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\code\\fullstack\\DatingApp\\api\\API.csproj",
+        "projectPath": "C:\\code\\fullstack\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\c1c\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\fullstack\\DatingApp\\api\\obj\\",
+        "outputPath": "C:\\code\\fullstack\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,20 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc.2.20475.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0-rc.2.20475.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.0-rc.2.20475.6, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.5.1, )"
