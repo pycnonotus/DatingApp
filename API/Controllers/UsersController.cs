@@ -3,7 +3,7 @@ using System.Linq;
 using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
-
+// TODO doc this shit
 namespace API.Controllers {
     [ApiController]
     [Route ("/api/[controller]")]
