@@ -6,7 +6,7 @@ using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 // TODO doc this shit
-//dasds
+
 namespace API.Controllers {
     [ApiController]
     [Route ("/api/[controller]")]
