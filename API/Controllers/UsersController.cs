@@ -31,5 +31,3 @@ namespace API.Controllers {
 
     }
 }
-//
-/// Get////////////////////////////////sa
