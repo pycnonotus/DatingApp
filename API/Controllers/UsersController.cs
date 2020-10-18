@@ -5,12 +5,9 @@ using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-// TODO doc this shit
 
 namespace API.Controllers {
-    [ApiController]
-    [Route ("/api/[controller]")]
-    public class UsersController : ControllerBase {
+    public class UsersController : BaseApiController {
         private readonly DataContext context;
         public UsersController (DataContext context) {
             this.context = context;
