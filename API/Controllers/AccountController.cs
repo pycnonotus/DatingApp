@@ -4,18 +4,21 @@ using System.Threading.Tasks;
 using API.Data;
 using API.DTOs;
 using API.Entities;
+using API.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers {
     public class AccountController : BaseApiController {
         private readonly DataContext context;
-        public AccountController (DataContext context) {
+        private readonly ITokenService tokenService;
+        public AccountController (DataContext context, ITokenService tokenService) {
+            this.tokenService = tokenService;
             this.context = context;
         }
 
         [HttpPost ("register")]
-        public async Task<ActionResult<AppUsers>> Register (RegisterDto registerDto) {
+        public async Task<ActionResult<UserDto>> Register (RegisterDto registerDto) {
 
             if (await UserExists (registerDto.Username.ToLower ())) {
                 return BadRequest ("User already exists");
@@ -29,12 +32,16 @@ namespace API.Controllers {
             };
             this.context.Users.Add (user);
             await context.SaveChangesAsync ();
-            return user;
+
+            return new UserDto {
+                Username = user.UserName,
+                    Token = tokenService.CreateToken (user)
+            };
         }
 
         [HttpPost ("login")]
-        public async Task<ActionResult<AppUsers>> Login (LoginDto loginDto) {
-            var user = await context.Users.SingleOrDefaultAsync (x => x.UserName == loginDto.Username.ToLower());
+        public async Task<ActionResult<UserDto>> Login (LoginDto loginDto) {
+            var user = await context.Users.SingleOrDefaultAsync (x => x.UserName == loginDto.Username.ToLower ());
             if (user == null) {
                 return Unauthorized ("Cant find user with the name");
             }
@@ -47,8 +54,10 @@ namespace API.Controllers {
 
                 }
             }
-            return user;
-
+            return new UserDto {
+                Username = user.UserName,
+                    Token = tokenService.CreateToken (user)
+            };
         }
         private async Task<bool> UserExists (string username) {
             return await this.context.Users.AnyAsync (x => x.UserName == username.ToLower ());
