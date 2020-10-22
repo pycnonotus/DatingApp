@@ -1,0 +1,28 @@
+<div class="container mt5">
+  <div  style="text-align: center;"  *ngIf="!registerMode"  >
+    <h1>
+      Find your match
+    </h1>
+    <p class="lead">
+      Come on to view your matches, All you need to do is sign up!;
+    </p>
+    <div class="text-center">
+      <button
+
+      (click)="registerToggle()"
+
+      class="btn btn-primary">
+        Register
+      </button>
+    </div>
+  </div>
+  <ng-container>
+    <div class="row justify-content-center" *ngIf="registerMode">
+      <div class="col-4">
+        <p>
+          Lorem ipsum dolor sit.
+        </p>
+      </div>
+    </div>
+  </ng-container>
+</div>
