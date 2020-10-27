@@ -18,23 +18,40 @@
             "command": "dotnet",
             "type": "process",
             "args": [
-                "publish",
+                "watch",
                 "${workspaceFolder}/API/API.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                                "run",
+
             ],
             "problemMatcher": "$msCompile"
         },
         {
             "label": "watch",
             "command": "dotnet",
-            "type": "process",
+            "type": "shell",
             "args": [
                 "watch",
+                "--project",
+                 "${workspaceFolder}\\API\\API.csproj",
                 "run",
-                "${workspaceFolder}/API/API.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+              {
+            "label": "serve",
+            "options": {
+                "cwd": "${workspaceFolder}\\client"
+            },
+            "command": "ng",
+            "type": "shell",
+            "args": [
+                "serve",
+                "--project",
+                "--open",
+                "--watch",
+
             ],
             "problemMatcher": "$msCompile"
         }

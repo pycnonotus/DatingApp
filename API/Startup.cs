@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using API.Data;
 using API.Extensions;
 using API.Interfaces;
+using API.Middleware;
 using API.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -55,6 +56,7 @@ namespace API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
             }
 
+            app.UseMiddleware<ExceptionMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseRouting();

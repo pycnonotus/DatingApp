@@ -1,0 +1,24 @@
+<h4>Internal server error - place refresh the page</h4>
+<ng-container *ngIf="error">
+  <h5 class="text-danger">
+    {{ error.message }}
+  </h5>
+  <p class="font-weight-bold">
+    Note: If you are seeing this then there is an internal server error
+  </p>
+  <p>what to do?</p>
+  <ol>
+    <li>Open the chrome dev tools</li>
+    <li>Inspect the network tab</li>
+    <li>is there any failing requests?</li>
+    <li>is the requests URL sabba?</li>
+    <li>
+      * try to do it in postman > if postman have no problems then it angualr
+      kafra
+    </li>
+  </ol>
+  <p>blop blop blop</p>
+  <code class="mt-5">
+    {{ error.details }}
+  </code>
+</ng-container>

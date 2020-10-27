@@ -4728,24 +4728,22 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\code\\fullstack\\DatingApp\\API\\API.csproj",
+      "projectUniqueName": "C:\\code\\fullstack\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "c:\\code\\fullstack\\DatingApp\\API\\API.csproj",
+      "projectPath": "C:\\code\\fullstack\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\c1c\\.nuget\\packages\\",
-      "outputPath": "c:\\code\\fullstack\\DatingApp\\API\\obj\\",
+      "outputPath": "C:\\code\\fullstack\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\c1c\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\c1c\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
