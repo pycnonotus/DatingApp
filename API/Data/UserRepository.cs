@@ -22,8 +22,8 @@ namespace API.Data {
                 .ProjectTo<MemberDto> (this.mapper.ConfigurationProvider).SingleOrDefaultAsync ();
         }
 
-        public Task<IEnumerable<MemberDto>> GetMembersAsync () {
-            throw new System.NotImplementedException ();
+        public async Task<IEnumerable<MemberDto>> GetMembersAsync () {
+            return await this.context.Users.ProjectTo<MemberDto> (this.mapper.ConfigurationProvider).ToListAsync ();
         }
 
         public async Task<IEnumerable<AppUsers>> GetUserAsync () => await context.Users.Include (p => p.Photos).ToListAsync ();
