@@ -72,3 +72,4 @@ C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentica
 C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Data\UserSeedData.json

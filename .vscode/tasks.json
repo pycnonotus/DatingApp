@@ -37,7 +37,10 @@
                  "${workspaceFolder}\\API\\API.csproj",
                 "run",
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "runOptions": {
+           "runOn": "folderOpen"
+    }
         },
               {
             "label": "serve",
@@ -53,7 +56,11 @@
                 "--watch",
 
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "runOptions": {
+               "runOn": "folderOpen"
+    }
+            
         }
     ]
 }
