@@ -73,3 +73,5 @@ C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protoco
 C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Data\UserSeedData.json
+C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\AutoMapper.dll
+C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
