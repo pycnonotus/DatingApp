@@ -45,7 +45,7 @@
               {
             "label": "serve",
             "options": {
-                "cwd": "${workspaceFolder}\\client"
+                "cwd": "${workspaceFolder}\\client",
             },
             "command": "ng",
             "type": "shell",
