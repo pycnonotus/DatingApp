@@ -2,3 +2,9 @@ a.dropdown-item,
 a.dropdown-toggle {
   cursor: pointer;
 }
+
+img {
+  max-height: 35px;
+  border: 2px solid #fff;
+  border-radius: 3000px;
+}

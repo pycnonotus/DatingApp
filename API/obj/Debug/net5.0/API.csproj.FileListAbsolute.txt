@@ -75,3 +75,4 @@ C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\Data\UserSeedData.json
 C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\AutoMapper.dll
 C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\code\fullstack\DatingApp\API\bin\Debug\net5.0\CloudinaryDotNet.dll

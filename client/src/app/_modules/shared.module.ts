@@ -5,6 +5,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { HttpClientModule } from '@angular/common/http';
+import { FileUploadModule } from 'ng2-file-upload';
 @NgModule({
   declarations: [],
   imports: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgxGalleryModule,
     HttpClientModule,
     NgxGalleryModule,
+    FileUploadModule,
   ],
   exports: [
     NgxGalleryModule,
@@ -24,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     ToastrModule,
     TabsModule,
     HttpClientModule,
+    FileUploadModule,
   ],
 })
 export class SharedModule {}

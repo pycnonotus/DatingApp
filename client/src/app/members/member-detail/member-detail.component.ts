@@ -41,6 +41,8 @@ export class MemberDetailComponent implements OnInit {
     if (!this.member) {
       return [];
     }
+
+
     for (const photo of this.member?.photos) {
       imagesUrl.push({
         small: photo?.url,
@@ -48,8 +50,9 @@ export class MemberDetailComponent implements OnInit {
         big: photo?.url,
       });
 
-      return imagesUrl;
+
     }
+    return imagesUrl;
   }
 
   loadMember() {
