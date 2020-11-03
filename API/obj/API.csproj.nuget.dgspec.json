@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\fullstack\\DatingApp\\API\\API.csproj": {}
+    "C:\\Users\\Anton\\Desktop\\code\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\code\\fullstack\\DatingApp\\API\\API.csproj": {
+    "C:\\Users\\Anton\\Desktop\\code\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\fullstack\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Anton\\Desktop\\code\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\code\\fullstack\\DatingApp\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\c1c\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\fullstack\\DatingApp\\API\\obj\\",
+        "projectPath": "C:\\Users\\Anton\\Desktop\\code\\DatingApp\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Anton\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anton\\Desktop\\code\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\c1c\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Anton\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -98,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
         }
       }
     }
