@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   // tslint:disable-next-line: typedef
   registerToggle() {
     // tslint:disable-next-line: no-unused-expression
-    console.log('s');
 
     this.registerMode = !this.registerMode;
   }

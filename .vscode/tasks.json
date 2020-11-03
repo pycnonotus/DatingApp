@@ -22,8 +22,7 @@
                 "${workspaceFolder}/API/API.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
-                                "run",
-
+                "run"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -34,33 +33,26 @@
             "args": [
                 "watch",
                 "--project",
-                 "${workspaceFolder}\\API\\API.csproj",
-                "run",
+                "${workspaceFolder}\\API\\API.csproj",
+                "run"
             ],
             "problemMatcher": "$msCompile",
             "runOptions": {
-           "runOn": "folderOpen"
-    }
+                "runOn": "folderOpen"
+            }
         },
-              {
+        {
             "label": "serve",
             "options": {
-                "cwd": "${workspaceFolder}\\client",
+                "cwd": "${workspaceFolder}\\client"
             },
             "command": "ng",
             "type": "shell",
-            "args": [
-                "serve",
-                "--project",
-                "--open",
-                "--watch",
-
-            ],
+            "args": ["serve", "--open"],
             "problemMatcher": "$msCompile",
             "runOptions": {
-               "runOn": "folderOpen"
-    }
-            
+                "runOn": "folderOpen"
+            }
         }
     ]
 }
