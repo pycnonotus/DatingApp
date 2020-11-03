@@ -58,6 +58,7 @@ export class RegisterComponent implements OnInit {
     };
   }
 
+  // tslint:disable-next-line: typedef
   register() {
     this.accountService.register(this.registerForm.value).subscribe(
       (res) => {
@@ -69,7 +70,7 @@ export class RegisterComponent implements OnInit {
     );
   }
 
+  // tslint:disable-next-line: typedef
   cancel() {
-    console.log('cancewled');
   }
 }

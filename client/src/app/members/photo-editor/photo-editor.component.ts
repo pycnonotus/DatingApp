@@ -39,6 +39,7 @@ export class PhotoEditorComponent implements OnInit {
     this.hasBaseDropZoneOver = e;
   }
 
+  // tslint:disable-next-line: typedef
   setMainPhoto(photo: Photo) {
     this.memberService.setMainPhoto(photo.id).subscribe(() => {
       this.user.photoUrl = photo.url;
@@ -58,6 +59,7 @@ export class PhotoEditorComponent implements OnInit {
   // tslint:disable-next-line: typedef
   deletePhoto(photoId: number) {
     this.memberService.deletePhoto(photoId).subscribe(() => {
+      // tslint:disable-next-line: triple-equals
       this.member.photos = this.member.photos.filter((x) => x.id != photoId);
     });
   }
