@@ -27,7 +27,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "watch",
+            "label":  "watch",
             "command": "dotnet",
             "type": "shell",
             "args": [

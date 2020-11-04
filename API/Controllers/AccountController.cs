@@ -28,6 +28,7 @@ namespace API.Controllers
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
 
+            
             if (await UserExists(registerDto.Username.ToLower()))
             {
                 return BadRequest("User already exists");
