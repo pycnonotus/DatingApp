@@ -38,7 +38,11 @@ namespace API.Data
             var maxDob = DateTime.Today.AddYears(-userParam.MinAge); // right
             query = query.Where(q => q.DateOfBirth >= minDob && q.DateOfBirth <= maxDob);
 
-
+            query = userParam.OrderBy switch
+            {
+                "created" => query.OrderByDescending(q => q.Created),
+                _ => query.OrderByDescending(q => q.LastActive)
+            };
 
             return await PagedList<MemberDto>.CreateAsync(query.ProjectTo<MemberDto>(this.mapper.ConfigurationProvider).AsNoTracking()
             , userParam.PageNumber, userParam.PageSize);

@@ -7,6 +7,9 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { HttpClientModule } from '@angular/common/http';
 import { FileUploadModule } from 'ng2-file-upload';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { TimeagoModule } from 'ngx-timeago';
+
 
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 @NgModule({
@@ -24,6 +27,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     FileUploadModule,
     BsDatepickerModule.forRoot(),
     PaginationModule.forRoot(),
+    ButtonsModule.forRoot(),
+    TimeagoModule.forRoot(),
   ],
   exports: [
     NgxGalleryModule,
@@ -34,6 +39,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     FileUploadModule,
     BsDatepickerModule,
     PaginationModule,
+    ButtonsModule,
+    TimeagoModule,
   ],
 })
 export class SharedModule {}
