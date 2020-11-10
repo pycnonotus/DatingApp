@@ -1,5 +1,5 @@
-    using API.Entities;
-    using Microsoft.EntityFrameworkCore;
+using API.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Data
 {
@@ -10,8 +10,28 @@ namespace API.Data
         }
 
         public DbSet<AppUsers> Users { get; set; }
-        
+        public DbSet<UserLike> Likes { get; set; }
 
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserLike>().HasKey(k => new
+            {
+                k.SourceUserId,
+                k.LikedUserId
+            });
+            modelBuilder.Entity<UserLike>()
+            .HasOne(u => u.SourceUser)
+            .WithMany(u => u.LikedUsers).HasForeignKey(u => u.SourceUserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+
+            modelBuilder.Entity<UserLike>()
+            .HasOne(u => u.LikedUser)
+            .WithMany(u => u.LikedByUsers).HasForeignKey(u => u.LikedUserId)
+            .OnDelete(DeleteBehavior.Cascade); // SQL SERVER change this to DeleteBehavior.NoAction
+        }
+
+
     }
 }
