@@ -11,6 +11,7 @@
         "devkit",
         "downlevel",
         "kolkov",
-        "tabset"
+        "tabset",
+        "timeago"
     ]
 }
