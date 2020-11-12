@@ -65,3 +65,4 @@ C:\Users\Anton\Desktop\code\DatingApp\API\obj\Debug\net5.0\scopedcss\bundle\API.
 C:\Users\Anton\Desktop\code\DatingApp\API\obj\Debug\net5.0\API.RazorTargetAssemblyInfo.cache
 C:\Users\Anton\Desktop\code\DatingApp\API\obj\Debug\net5.0\API.csproj.CopyComplete
 C:\Users\Anton\Desktop\code\DatingApp\API\obj\Debug\net5.0\API.genruntimeconfig.cache
+C:\Users\Anton\Desktop\code\DatingApp\API\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
