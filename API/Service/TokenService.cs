@@ -1,37 +1,53 @@
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
 using API.Entities;
 using API.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace API.Service {
-    public class TokenService : ITokenService {
+namespace API.Service
+{
+    public class TokenService : ITokenService
+    {
         private readonly SymmetricSecurityKey key;
-        public TokenService (IConfiguration config) {
-            this.key = new SymmetricSecurityKey (
-                Encoding.UTF8.GetBytes (config["TokenKey"])
+        private readonly UserManager<AppUsers> userManager;
+        public TokenService(IConfiguration config, UserManager<AppUsers> userManager)
+        {
+            this.userManager = userManager;
+            this.key = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(config["TokenKey"])
             );
         }
 
-        public string CreateToken (AppUsers user) {
+        public async Task<string> CreateToken(AppUsers user)
+        {
             var claims = new List<Claim> {
                 new Claim (JwtRegisteredClaimNames.NameId, user.Id.ToString()),
                 new Claim (JwtRegisteredClaimNames.UniqueName, user.UserName),
             };
 
-            var creds = new SigningCredentials (
+            var roles = await userManager.GetRolesAsync(user);
+
+            claims.AddRange(roles.Select(role => 
+                new Claim(ClaimTypes.Role, role)
+            ));
+
+            var creds = new SigningCredentials(
                 key,
                 SecurityAlgorithms.HmacSha512Signature
             );
 
-            var tokenDescriptor = new SecurityTokenDescriptor {
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
 
-                Subject = new ClaimsIdentity (claims),
-                Expires = DateTime.Now.AddDays (7),
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.Now.AddDays(7),
                 SigningCredentials = creds
             };
 
