@@ -103,7 +103,7 @@ namespace API.Data
                 {
                     msg.DateRead = DateTime.UtcNow;
                 }
-                await this.SaveAllAsync(); //TODO: cheek if the await is need here?
+                await this.context.SaveChangesAsync(); //TODO: cheek if the await is need here?
             }
 
             return mapper.Map<IEnumerable<MessageDto>>(messages);
@@ -114,9 +114,6 @@ namespace API.Data
             this.context.Connections.Remove(connection);
         }
 
-        public async Task<bool> SaveAllAsync()
-        {
-            return await this.context.SaveChangesAsync() > 0;
-        }
+     
     }
 }

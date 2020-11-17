@@ -58,7 +58,6 @@ namespace API.Data
         {
             return await context.Users.Include(p => p.Photos).SingleOrDefaultAsync(x => x.UserName == username);
         }
-        public async Task<bool> SaveAllAsync() => await context.SaveChangesAsync() > 0;
 
         public void Update(AppUsers user)
         {
