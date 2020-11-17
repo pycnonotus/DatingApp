@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using API.DTOs;
@@ -12,6 +13,7 @@ namespace API.Interfaces {
         Task<AppUsers> GetUserByUsernameAsync (string username);
         Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams);
         Task<MemberDto> GetMemberAsync (string username);
+        Task<string>  GetUserGender(string username);
 
     }
 }

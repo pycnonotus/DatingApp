@@ -59,6 +59,13 @@ namespace API.Data
             return await context.Users.Include(p => p.Photos).SingleOrDefaultAsync(x => x.UserName == username);
         }
 
+        public async Task<string> GetUserGender(string username)
+        {
+            return await context.Users
+            .Where(x => x.UserName == username)
+            .Select(x => x.Gender).FirstOrDefaultAsync();
+        }
+
         public void Update(AppUsers user)
         {
             this.context.Entry(user).State = EntityState.Modified;

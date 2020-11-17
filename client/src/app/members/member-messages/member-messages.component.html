@@ -1,7 +1,11 @@
 <div class="card">
     <div class="card-body">
         <div class="" *ngIf="(messageService.messagesThread$| async)?.length === 0">No nudes yes :\</div>
-        <ul *ngIf="(messageService.messagesThread$| async)">
+        <ul
+        #scrollMe
+        style="overflow: scroll; height: 400px;"
+        [scrollTop]="scrollMe.scrollHeight"
+        *ngIf="(messageService.messagesThread$| async)">
             <li class="chat" *ngFor="let message of (messageService.messagesThread$| async)">
                 <div class="">
                     <span class="chat-image float-right">
