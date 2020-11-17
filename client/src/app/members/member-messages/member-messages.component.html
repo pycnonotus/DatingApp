@@ -1,8 +1,8 @@
 <div class="card">
     <div class="card-body">
-        <div class="" *ngIf="messages?.length === 0">No nudes yes :\</div>
-        <ul *ngIf="messages?.length">
-            <li class="chat" *ngFor="let message of messages">
+        <div class="" *ngIf="(messageService.messagesThread$| async)?.length === 0">No nudes yes :\</div>
+        <ul *ngIf="(messageService.messagesThread$| async)">
+            <li class="chat" *ngFor="let message of (messageService.messagesThread$| async)">
                 <div class="">
                     <span class="chat-image float-right">
                         <img

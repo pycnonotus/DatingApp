@@ -24,7 +24,7 @@
                 "/consoleloggerparameters:NoSummary",
                 "run"
             ],
-            "problemMatcher": "$msCompile"
+        "problemMatcher": "$msCompile"
         },
         {
             "label":  "watch",
